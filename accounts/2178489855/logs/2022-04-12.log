@@ -1,0 +1,33 @@
+[2022-04-12 14:33:11] [WARNING]: 警告: Reply 元素中必须包含 text 或 id 
+[2022-04-12 14:33:11] [WARNING]: 好友消息发送失败: 消息为空. 
+[2022-04-12 14:33:26] [WARNING]: 警告: Reply 元素中必须包含 text 或 id 
+[2022-04-12 14:33:26] [WARNING]: 好友消息发送失败: 消息为空. 
+[2022-04-12 14:33:40] [WARNING]: 警告: Reply 元素中必须包含 text 或 id 
+[2022-04-12 14:33:40] [WARNING]: 好友消息发送失败: 消息为空. 
+[2022-04-12 14:41:51] [WARNING]: 警告: Reply 元素中必须包含 text 或 id 
+[2022-04-12 14:41:51] [WARNING]: 好友消息发送失败: 消息为空. 
+[2022-04-12 16:44:19] [WARNING]: 监听反向WS Universal时出现错误: read tcp 127.0.0.1:11596->127.0.0.1:23745: wsarecv: An existing connection was forcibly closed by the remote host. 
+[2022-04-12 16:44:21] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:11596->127.0.0.1:23745: wsasend: An existing connection was forcibly closed by the remote host. 
+[2022-04-12 16:44:23] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:01:37] [WARNING]: 监听反向WS Universal时出现错误: read tcp 127.0.0.1:12275->127.0.0.1:23745: wsarecv: An existing connection was forcibly closed by the remote host. 
+[2022-04-12 17:53:28] [WARNING]: 监听反向WS Universal时出现错误: read tcp 127.0.0.1:12350->127.0.0.1:23745: wsarecv: An existing connection was forcibly closed by the remote host. 
+[2022-04-12 17:53:29] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:12350->127.0.0.1:23745: wsasend: An existing connection was forcibly closed by the remote host. 
+[2022-04-12 17:53:32] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:35] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:38] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:41] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:44] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:48] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:51] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:54] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:53:57] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:00] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:03] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:06] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:09] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:13] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:16] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:19] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:22] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:25] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-12 17:54:28] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 

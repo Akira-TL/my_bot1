@@ -1,0 +1,7 @@
+[2022-04-18 00:16:41] [WARNING]: 监听反向WS Universal时出现错误: read tcp 127.0.0.1:4035->127.0.0.1:23745: wsarecv: An existing connection was forcibly closed by the remote host. 
+[2022-04-18 00:16:42] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:4035->127.0.0.1:23745: wsasend: An existing connection was forcibly closed by the remote host. 
+[2022-04-18 00:20:01] [WARNING]: 监听反向WS Universal时出现错误: read tcp 127.0.0.1:4184->127.0.0.1:23745: wsarecv: An existing connection was forcibly closed by the remote host. 
+[2022-04-18 00:20:01] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:4184->127.0.0.1:23745: wsasend: An existing connection was forcibly closed by the remote host. 
+[2022-04-18 00:20:04] [FATAL]: 打开数据库失败: open backend error: open leveldb error: The process cannot access the file because it is being used by another process. 
+[2022-04-18 00:22:04] [WARNING]: 监听反向WS Universal时出现错误: read tcp 127.0.0.1:4282->127.0.0.1:23745: wsarecv: An existing connection was forcibly closed by the remote host. 
+[2022-04-18 00:22:05] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:4282->127.0.0.1:23745: wsasend: An existing connection was forcibly closed by the remote host. 
