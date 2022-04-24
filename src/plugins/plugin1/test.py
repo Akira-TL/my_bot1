@@ -1,14 +1,18 @@
+import requests
+from nonebot import on_keyword, on_regex
+from nonebot.adapters.onebot.v11 import (
+    Event,
+    Message,
+    MessageSegment,
+)
 
-import nonebot,re
-from ..tools.my_way import way
-from nonebot import on, on_command, on_keyword, on_metaevent, on_notice
-from nonebot.adapters.onebot.v11 import Bot, Event
-
-a = on_keyword('时',priority=11)
-@a.handle()
-async def _(event:Event,bot:Bot):
-    group_id = way.get_group_id(event.get_session_id())
-    print(group_id)
-    print('\n',
-    event.get_session_id(),'\n',
-    )
+url = 'https://tenapi.cn/acg'
+test = on_regex('test',priority=11)
+@test.handle()
+async def test_(event:Event):
+    data = {
+        'return':True
+    }
+    html = requests.get(url,data=data).url
+    print(html)
+    await test.send(MessageSegment.image('https://tva1.sinaimg.cn/large/dae614afly1fu89q0es5fj21op1c74qp.jpg'))

@@ -37,6 +37,8 @@ async def chet_(bot:Bot,event:Event):
             event=event,
             message=mysay
         )
+    else:
+        await answer.skip()
 
 async def replace_str(text:str):
     fix = {'小思':'糖糖','金融':''}
