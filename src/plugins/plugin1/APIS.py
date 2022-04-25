@@ -6,6 +6,7 @@ from nonebot.adapters.onebot.v11 import (
     Message,
     MessageSegment,
 )
+from tomlkit import date
 
 meitu = on_regex('美女',priority=11)
 # yunshi = on_regex('运势',priority=11)
@@ -48,24 +49,43 @@ async def b404_(event:Event):
     print(html)
     await b404.send(MessageSegment.image(html['img']))
 
+url = 'https://tenapi.cn/acg'
+headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.44'}
+acg = on_regex('acg',priority=11)
+@acg.handle()
+async def acg_(event:Event):
+    data = {
+        'return':True
+    }
+    html = requests.get(url,data=data).url
+    print(html)
+    await acg.send(Message(f"[CQ:image,file={html}]"))
+
 # weather = on_regex('天气',priority=11)
-# weather_url = 'https://api.iyk0.com/7rtq'
 # @weather.handle()
 # async def weather_(event:Event):
-#     message = event.get_message()
-#     result = re.findall('(.){2}(.){2}[.*]天气',message)
-#     city = result.group(0)
+#     weather_url = 'https://api.iyk0.com/7rtq'
+#     message = str(event.get_message())
+#     print(message)
+#     # print(type(event.get_message()))
+#     result = re.findall('(.{2})(.天)|(.{2})(天气)',message)
+#     print(result)
+#     city = result[0][2]
+#     date = result[0][3]
+#     print(city)
 #     data = {
 #         'city':city
 #     }
-#     html = requests.get(weather_url,data=json.dump(data))
+#     weather_url = weather_url + '/?city=' + city
+#     print(weather_url)
+#     html = requests.get(weather_url)
 #     html = json.loads(html.content)
-#     if result.group(1) == '天气':
+#     if date == '天气':
 #         # date = re.findall('(.){10}',html['update_time'])
 #         date_num = 0
-#     elif result.group(1) == '明天':
+#     elif date == '明天':
 #         date_num = 1
-#     elif result.group(1) == '后天':
+#     elif date == '后天':
 #         date_num = 2
 #     print(html)
 #     print(html['img'][date_num])
