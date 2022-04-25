@@ -1,15 +1,15 @@
 import json
-from tokenize import group
-from nonebot import on_command, on_keyword, on_notice, on_regex
-from nonebot.permission import SUPERUSER
+
+from nonebot import on_command, on_notice
 from nonebot.adapters.onebot.v11 import (
+    MessageSegment, 
+    GROUP_ADMIN, 
+    GROUP_OWNER, 
     NoticeEvent,
-    MessageSegment,
     Message,
-    Event,
-    Bot,
-    GROUP_ADMIN,GROUP_OWNER,
-)
+    Event, 
+    Bot, )
+from nonebot.permission import SUPERUSER
 
 path = 'F:\document\OneDrive - 南京农业大学\My_codes\python\my_bot1\src\plugins\plugin1\db'#数据文件的存储位置
 file = path + '\GroupInOrDecreaseNotice.json'
@@ -88,21 +88,6 @@ async def GroupNoticeswitch_(event:Event):
         await GroupNoticeswitch.finish('进退群提醒错误,请检查日志!')
 
 
-async def create_document():#检查有没有数据库,没有就创建,有就pass
-    try:
-        import os
-        os.mkdir(path)
-        print('<reate floder cuccesful>')
-    except FileExistsError:
-        pass
-    try:
-        f = open(path+'\\GroupInOrDecreaseNotice.json','r')
-    except FileNotFoundError:
-        f = open(path+'\\GroupInOrDecreaseNotice.json','w')
-        f.close()
-        print('<create documen cuccesful>')
-    print('<create_document() handed>')
-
 @GroupNoticeQuery.handle()#查询是否开启进退群提醒
 async def GroupNoticeQuery_(event:Event):
     group_id = str(event.get_session_id()).split('_')[1]
@@ -119,7 +104,19 @@ async def GroupNoticeQuery_(event:Event):
     except KeyError:
         await GroupNoticeQuery.finish('未开启进退群提醒!')
 
-test = on_notice()
-@test.handle()
-async def _(event:NoticeEvent):
-    print(event.get_event_description())
+async def create_document():#检查有没有数据库,没有就创建,有就pass
+    try:
+        import os
+        os.mkdir(path)
+        print('<reate floder cuccesful>')
+    except FileExistsError:
+        pass
+    try:
+        f = open(path+'\\GroupInOrDecreaseNotice.json','r')
+    except FileNotFoundError:
+        f = open(path+'\\GroupInOrDecreaseNotice.json','w')
+        f.close()
+        print('<create documen cuccesful>')
+    print('<create_document() handed>')
+
+
