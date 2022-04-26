@@ -21,7 +21,7 @@ async def _(bot:Bot,event:Event):
 
 
 switch:bool
-isopen = on_regex('[(上|下)车]',block=False)
+isopen = on_keyword(['上车','下车'],block=False)
 @isopen.handle()
 async def _(event:Event):
     print('jinru')

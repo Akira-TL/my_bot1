@@ -8,7 +8,6 @@ from nonebot.adapters.onebot.v11 import (
 )
 from tomlkit import date
 
-meitu = on_regex('美女',priority=11)
 # yunshi = on_regex('运势',priority=11)
 # url = 'http://api.wpbom.com/api/conste.php'
 # @yunshi.handle()
@@ -26,6 +25,7 @@ meitu = on_regex('美女',priority=11)
 path = "F:\document\OneDrive - 南京农业大学\My_codes\python\my_bot1\src\plugins\plugin1"
 UA = {'User-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.50'}
 url2 = 'https://api.iyk0.com/mtyh/?return=json'
+meitu = on_regex('美图',priority=11)
 @meitu.handle()
 async def meitu_(event:Event):
     html = requests.get(url2)
