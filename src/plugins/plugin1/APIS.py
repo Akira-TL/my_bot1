@@ -1,5 +1,5 @@
 #星座运势
-import requests,json,re
+import requests,json,re,os
 from nonebot import on_keyword, on_regex
 from nonebot.adapters.onebot.v11 import (
     Event,
@@ -23,20 +23,38 @@ meitu = on_regex('美女',priority=11)
 #     print(html)
 #     # await acg.send(Message(f"[CQ:image,file={html}]"))
 
+path = "F:\document\OneDrive - 南京农业大学\My_codes\python\my_bot1\src\plugins\plugin1"
+UA = {'User-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.50'}
 url2 = 'https://api.iyk0.com/mtyh/?return=json'
 @meitu.handle()
 async def meitu_(event:Event):
-    data = {
-        'return':'True'
-    }
     html = requests.get(url2)
-    html = json.loads(html.content)
-    # html = str(html)
-    # html = 'https://tva1.sinaimg.cn/large/dae614afly1fu89lrtp2hj212w0rgkjl.jpg'
-    print(html['imgurl'])
-    await meitu.send(message=MessageSegment.image('http://p.ananas.chaoxing.com/star3/origin/c3f116e787ad710171f12ffc37940d68.png'))
+    img_url = json.loads(html.content)['imgurl']
+    print(img_url)
+    # print(html['imgurl'])
+    img = requests.get(img_url,headers=UA)
+    img_name = img_url.split('/')[-1]
+    # print(img_name)
+    meitu_path = path + '\pictures\meitu\\'
 
-b404 = on_regex('404',priority=11)
+    try:
+        os.mkdir(path + '\pictures')
+        print('<reate floder cuccesful>')
+    except FileExistsError:
+        pass
+    try:
+        os.mkdir(path + '\pictures\meitu')
+        print('<reate floder cuccesful>')
+    except FileExistsError:
+        pass
+
+    with open(meitu_path + img_name,'wb') as f:
+        f.write(img.content)
+        f.close()
+    
+    await meitu.send(message=MessageSegment.image('file:///' + meitu_path + img_name))
+
+b404 = on_keyword(['404'],priority=11)
 url3 = 'https://api.iyk0.com/bili_chart'
 @b404.handle()
 async def b404_(event:Event):
